@@ -1,0 +1,111 @@
+$gray: #eee;
+$white: #fff;
+$black: #333;
+$active: #E74C3C;
+
+.info-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  background-color: $white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  .info-slider-menu {
+    height: 70%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin: 0;
+        padding: 10px 0 10px 0;
+        display: flex;
+        line-height: 34px;
+        color: rgba($black, .5);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all .2s ease-out;
+        opacity: 0.5;
+
+        &:hover, &.active {
+          opacity: 1;
+          color: rgba($black, 1);
+        }
+
+        &:hover {
+          color: rgba($black, 1);
+          transition: all .2s ease-out;
+        }
+
+        img {
+          display: inline;
+          width: 32px;
+          height: 32px;
+          margin-right: 20px;
+          transition: all .2s ease-out;
+        }
+      }
+    }
+  }
+
+  .info-slider-border {
+    height: 300px;
+    width: 1px;
+    background-color: rgba($black, .2);
+
+    .line.one {
+      width: 5px;
+      height: 54px;
+      background-color: $active;
+      margin-left: -2px;
+      margin-top: 35px;
+      transition: all .4s ease-in-out;
+    }
+  }
+
+  .info-slider-content {
+    height: 300px;
+    width: 75%;
+    overflow: hidden;
+
+    app-info-slider-element {
+      padding: 30px;
+      box-sizing: border-box;
+      position: absolute;
+      width: 75%;
+      transition: all .6s ease-in-out;
+      margin-top: -350px;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      h1, h2, h3, h4, h5, h6 {
+        text-align: center;
+      }
+
+      &.active {
+        margin-top: 0;
+        opacity: 1;
+        transition: all .6s ease-in-out;
+      }
+    }
+  }
+}
+
+
+
+
+
+

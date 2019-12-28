@@ -1,0 +1,26 @@
+<div class="info-slider" *ngIf="elements">
+  <div class="info-slider-menu">
+    <ul>
+      <li
+        *ngFor="let element of elements; let i = index"
+        [ngClass]="{ 'active': (activeIndex$ | async) === i }"
+        (click)="setActive(i)"
+      >
+        <img
+          *ngIf="element.icon"
+          [ngClass]="{ 'active': (activeIndex$ | async) === i }"
+          [src]="element.icon"
+        />
+        {{ element.label }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="info-slider-border">
+    <div class="line one"></div>
+  </div>
+
+  <div class="info-slider-content">
+    <ng-content></ng-content>
+  </div>
+</div>

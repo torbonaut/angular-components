@@ -1,0 +1,41 @@
+:host {
+  min-height: 100vh;
+  background: #eee;
+  display: block;
+  padding: 20px;
+}
+
+p {
+  color: #777;
+  font-weight: 400;
+  font-style: italic;
+  margin: 1rem 0 3rem;
+  /* position relative for the pseudo element */
+  position: relative;
+  z-index: 5;
+  min-height: 100px;
+}
+p:before {
+  /* with SVG elements include two icons for the quote */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -5;
+  opacity: 0.05;
+  /* position the icons at either end of the paragraph, rotate the second to have a mirrorer image */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70"><rect x="0" y="40" width="30" height="30"></rect><path d="M 0 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path><rect x="40" y="40" width="30" height="30"></rect><path d="M 40 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path></svg>'),
+  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70" transform="rotate(180)"><rect x="0" y="40" width="30" height="30"></rect><path d="M 0 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path><rect x="40" y="40" width="30" height="30"></rect><path d="M 40 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path></svg>');
+  background-position: 20% 20%, 80% 80%;
+  background-repeat: no-repeat;
+}
+h1 {
+  /* considerably reduce the size of the heading */
+  color: hsl(260, 5%, 55%);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
