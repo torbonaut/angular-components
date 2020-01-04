@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ScreenHomeComponent} from './screens/screen-home/screen-home.component';
 import {Screen404Component} from './screens/screen404/screen404.component';
-import {ScreenCardComponent} from './screens/screen-card/screen-card.component';
+import {ScreenQuoteCardComponent} from './screens/screen-quote-card/screen-quote-card.component';
 import {ScreenFooterNavigationComponent} from './screens/screen-footer-navigation/screen-footer-navigation.component';
 import {ScreenSliderComponent} from './screens/screen-slider/screen-slider.component';
 
@@ -17,8 +17,8 @@ const routes: Routes = [
     component: ScreenFooterNavigationComponent
   },
   {
-    path: 'fancy-card',
-    component: ScreenCardComponent
+    path: 'quote-card',
+    component: ScreenQuoteCardComponent
   },
   {
     path: 'home',

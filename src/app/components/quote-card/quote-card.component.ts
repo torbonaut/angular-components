@@ -9,12 +9,12 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-fancy-card',
-  templateUrl: './fancy-card.component.html',
-  styleUrls: ['./fancy-card.component.scss'],
+  selector: 'app-quote-card',
+  templateUrl: './quote-card.component.html',
+  styleUrls: ['./quote-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FancyCardComponent implements OnInit {
+export class QuoteCardComponent implements OnInit {
 
   @Input() imagePath: string;
 
