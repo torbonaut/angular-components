@@ -1,1 +1,14 @@
-<p>footer-navigation works!</p>
+<ul *ngIf="menu && menu.length > 0">
+  <div class="bar"></div>
+  <li
+    #li
+    *ngFor="let item of menu; let i = index"
+    (click)="select(li, i)"
+    [attr.data-active]="(selected$ | async) === i ? true : null"
+  >
+    <div class="icon">
+      <img [src]="item.iconURL" />
+    </div>
+    <div class="text">{{ item.title }}</div>
+  </li>
+</ul>
